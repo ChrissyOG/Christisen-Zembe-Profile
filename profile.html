@@ -1,64 +1,90 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Student Assignment Profile</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 class="my-profile-heading">Christisen Zembe</h1>
+    <header class="top-banner">
+        <header class="program-header">
+            <p class="program-tag">Software Engineering | Web Technologies</p>
+            <h1>Student Profile</h1>
+        </header>
 
-        <style>
-            h1 {
-                color: rgb(125, 12, 12);
-                font-size: 40px;
-                font: arial; 
-            }
-        </style>
-        <p>Software Engineer</p>
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#contacts">CONTACTS</a>
+        <nav aria-label="Main navigation">
+            <a href="#profile">Profile</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contacts">Contact</a>
         </nav>
-  
     </header>
-    <main>
-        <section>
-            <h2>ABOUT ME</h2>
-            <style>
-            h2{
-                color: rgb(125, 12, 12);
-                font:'Segoe UI', sans-serif;
-            }
-            p{
-                color: rgb(5, 5, 5);
-                font:Courier, monospace;
-            }
-        </style>
-            <p>Hello! My name is Christisen Zembe, and I am a passionate software engineer with a strong background in web development. I enjoy creating innovative solutions and continuously learning new technologies to enhance my skills.</p>
+
+    <main class="container">
+        <article id="profile" class="student-summary card">
+            <figure class="profile-photo" aria-label="Student initials">CZ</figure>
+            <section class="student-intro">
+                <p class="label">Student Name</p>
+                <h2>Christisen Zembe</h2>
+                <p class="subtitle">Software Engineering Student</p>
+            </section>
+            <ul class="details-grid">
+                <li><span>Student ID:</span> 250585</li>
+                <li><span>Course:</span> Web Technologies</li>
+                <li><span>Program:</span> Software Engineering</li>
+                <li><span>Year:</span> 2nd Year</li>
+            </ul>
+        </article>
+
+        <section id="about" class="card">
+            <h3>Personal Statement</h3>
+            <p>I am a simple and motivated student studying Software Engineering, with a strong interest in web development and digital problem-solving. I enjoy learning how modern websites are built and how technology can be used to solve real-world challenges.</p>
         </section>
-        <form>
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="date">Date of Birth:</label>
-            <input type="date" id="date" name="date"><br><br>
-            <label for="number">Phone Number:</label><br><br>
-            <input type="submit" value="Submit" style="border-radius: 8px; border: none; padding: 12px 24px; background-color: rgb(125, 12, 12); color: white;"><br><br>
-        <style>
-         form {
-                color: rgb(125, 12, 12);
-              }
-         button {
-                background-color: rgb(125, 12, 12);
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                cursor: pointer;
-            }
-        </style>
+
+        <section id="academics" class="card">
+            <h3>Academic Information</h3>
+            <ul>
+                <li><strong>Course:</strong> Web Technologies</li>
+                <li><strong>Program:</strong> Software Engineering</li>
+                <li><strong>Institution:</strong> Africa University </li>
+                <li><strong>Focus Areas:</strong> HTML, CSS, JavaScript, and web application development</li>
+            </ul>
+        </section>
+
+        <section id="skills" class="card">
+            <h3>Skills and Interests</h3>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+                <li>Learning</li>
+            </ul>
+        </section>
+
+        <section id="contacts" class="card contact-card">
+            <h3>Contact Details</h3>
+            <address class="contact-list">
+                <p><strong>Email:</strong> christisenzembe3@gmail.com</p>
+                <p><strong>Phone:</strong> +263 78 369 9860</p>
+                <p><strong>Address:</strong> Mutare, Zimbabwe</p>
+            </address>
+
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </main>
 </body>
 </html>
