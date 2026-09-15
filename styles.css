@@ -33,6 +33,11 @@ body {
     margin: 0 auto 18px;
 }
 
+.header-tagline {
+    margin: 0;
+    color: #fff;
+}
+
 .program-tag {
     margin: 0;
     text-transform: uppercase;
@@ -148,7 +153,7 @@ nav a:hover {
     font-weight: 700;
 }
 
-h3 {
+h2 {
     margin-top: 0;
     color: var(--primary);
     font-size: 1.3rem;

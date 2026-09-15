@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christisen Zembe's semantic Software Engineering student profile for Web Technologies.">
     <title>Student Assignment Profile</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="top-banner">
-        <header class="program-header">
+        <section class="program-header" aria-label="Student introduction">
             <p class="program-tag">Software Engineering | Web Technologies</p>
-            <h1>Student Profile</h1>
-        </header>
+            <h1>Christisen Zembe</h1>
+            <p class="header-tagline">Software Engineering Student</p>
+        </section>
 
         <nav aria-label="Main navigation">
             <a href="#profile">Profile</a>
@@ -23,10 +25,10 @@
 
     <main class="container">
         <article id="profile" class="student-summary card">
-            <figure class="profile-photo" aria-label="Student initials">CZ</figure>
+            <figure class="profile-photo" role="img" aria-label="Christisen Zembe initials">CZ</figure>
             <section class="student-intro">
                 <p class="label">Student Name</p>
-                <h2>Christisen Zembe</h2>
+                <h2>Student Profile</h2>
                 <p class="subtitle">Software Engineering Student</p>
             </section>
             <ul class="details-grid">
@@ -38,12 +40,12 @@
         </article>
 
         <section id="about" class="card">
-            <h3>Personal Statement</h3>
+            <h2>Personal Statement</h2>
             <p>I am a motivated Software Engineering student with a growing interest in web development, problem-solving, and building practical digital solutions. I enjoy learning how websites and technologies work, and I am always looking for ways to improve my skills while applying what I learn in a real-world setting.</p>
         </section>
 
         <section id="academics" class="card">
-            <h3>Academic Information</h3>
+            <h2>Academic Information</h2>
             <ul>
                 <li><strong>Course:</strong> Web Technologies</li>
                 <li><strong>Program:</strong> Software Engineering</li>
@@ -53,7 +55,7 @@
         </section>
 
         <section id="skills" class="card">
-            <h3>Skills and Interests</h3>
+            <h2>Skills and Interests</h2>
             <ul class="skills">
                 <li>HTML</li>
                 <li>CSS</li>
@@ -65,22 +67,25 @@
         </section>
 
         <section id="contacts" class="card contact-card">
-            <h3>Contact Details</h3>
+            <h2>Contact Details</h2>
             <address class="contact-list">
                 <p><strong>Email:</strong> christisenzembe3@gmail.com</p>
                 <p><strong>Phone:</strong> +263 78 369 9860</p>
                 <p><strong>Address:</strong> Mutare, Zimbabwe</p>
             </address>
 
-            <form>
+            <form action="#contacts" method="post">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <input type="text" id="name" name="name" placeholder="Enter your name" minlength="2" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[+0-9 ()-]{7,}" required>
 
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message" minlength="10" required></textarea>
 
                 <input type="submit" value="Submit">
             </form>
