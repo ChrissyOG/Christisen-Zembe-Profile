@@ -22,6 +22,12 @@ Result:
 Note:
 The first AI-generated personal statement was a bit formal and slightly unnatural in tone. The final version used in the profile was refined to sound more natural, friendly, and personal while keeping the original meaning and intent intact. This revision is simply an improvement of the same idea, not a different message.
 
+## Peer Review Accessibility Feedback
+
+During the peer review on Thursday, the reviewer identified a visibility and colour-contrast issue with the "Software Engineering | Web Technologies" program label in the red header. The text was visually subdued because it inherited a reduced opacity, which made it less clear to read.
+
+The fix was applied in `styles.css` by setting `.program-tag` to solid white (`color: #fff`) and removing the opacity reduction. This makes the label clearer against the header background and provides evidence that the peer-review feedback was acted on.
+
 ## Assignment Coverage
 This commit is aligned with the assignment requirements and includes:
 
