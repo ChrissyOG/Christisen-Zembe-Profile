@@ -19,6 +19,9 @@ Prompt:
 Result:
 "I am a simple and motivated student studying Software Engineering, with a strong interest in web development and digital problem-solving. I enjoy learning how modern websites are built and how technology can be used to solve real-world challenges."
 
+Note:
+The first AI-generated personal statement was a bit formal and slightly unnatural in tone. The final version used in the profile was refined to sound more natural, friendly, and personal while keeping the original meaning and intent intact. This revision is simply an improvement of the same idea, not a different message.
+
 ## Assignment Coverage
 This commit is aligned with the assignment requirements and includes:
 
