@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Christisen Zembe's semantic Software Engineering student profile for Web Technologies.">
     <title>Student Assignment Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="top-banner">
         <section class="program-header" aria-label="Student introduction">
             <p class="program-tag">Software Engineering | Web Technologies</p>
-            <h1>Christisen Zembe</h1>
-            <p class="header-tagline">Software Engineering Student</p>
+            <h1>Student Profile</h1>
         </section>
 
-        <nav aria-label="Main navigation">
-            <a href="#profile">Profile</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#contacts">Contact</a>
+        <nav aria-label="Main navigation" class="nav-shell flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+            <a class="nav-link" href="#profile">Profile</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#academics">Academic Information</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#contacts">Contact</a>
         </nav>
     </header>
 
     <main class="container">
         <article id="profile" class="student-summary card">
-            <figure class="profile-photo" role="img" aria-label="Christisen Zembe initials">CZ</figure>
+            <button class="profile-photo" type="button" aria-label="Spin Christisen Zembe initials">CZ</button>
             <section class="student-intro">
                 <p class="label">Student Name</p>
-                <h2>Student Profile</h2>
+                <h2>Christisen Zembe</h2>
                 <p class="subtitle">Software Engineering Student</p>
             </section>
             <ul class="details-grid">
@@ -49,51 +50,98 @@
             <ul>
                 <li><strong>Course:</strong> Web Technologies</li>
                 <li><strong>Program:</strong> Software Engineering</li>
-                <li><strong>Institution:</strong> Africa University </li>
+                <li><strong>Institution:</strong> Africa University</li>
                 <li><strong>Focus Areas:</strong> HTML, CSS, JavaScript, and web application development</li>
             </ul>
         </section>
 
         <section id="skills" class="card">
             <h2>Skills and Interests</h2>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Problem Solving</li>
-                <li>Teamwork</li>
-                <li>Learning</li>
-            </ul>
+            <div class="skills-grid" aria-label="Skills and interests grid">
+                <article class="skill-item">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, and accessible page structure for modern websites.</p>
+                </article>
+                <article class="skill-item">
+                    <h3>Problem Solving</h3>
+                    <p>Analysing technical challenges and turning them into practical solutions.</p>
+                </article>
+                <article class="skill-item">
+                    <h3>JavaScript</h3>
+                    <p>Building interactive and user-friendly front-end experiences.</p>
+                </article>
+                <article class="skill-item">
+                    <h3>Teamwork</h3>
+                    <p>Collaborating effectively and communicating ideas clearly in academic tasks.</p>
+                </article>
+                <article class="skill-item">
+                    <h3>Learning</h3>
+                    <p>Growing my skills through consistent practice, feedback, and research.</p>
+                </article>
+                <article class="skill-item">
+                    <h3>Design Thinking</h3>
+                    <p>Planning readable interfaces that balance usability and visual clarity.</p>
+                </article>
+            </div>
         </section>
 
         <section id="contacts" class="card contact-card">
-            <h2>Contact Details</h2>
-            <address class="contact-list">
-                <p><strong>Email:</strong> christisenzembe3@gmail.com</p>
-                <p><strong>Phone:</strong> +263 78 369 9860</p>
-                <p><strong>Address:</strong> Mutare, Zimbabwe</p>
-            </address>
+            <div class="contact-layout">
+                <div class="contact-details">
+                    <h2>Contact Details</h2>
+                    <address class="contact-list">
+                        <p><strong>Email:</strong> christisenzembe3@gmail.com</p>
+                        <p><strong>Phone:</strong> +263 78 369 9860</p>
+                        <p><strong>Address:</strong> Mutare, Zimbabwe</p>
+                    </address>
+                </div>
 
-            <form action="#contacts" method="post">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" minlength="2" required>
+                <form action="#contacts" method="post" class="contact-form mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-4 md:mt-0">
+                    <div class="field-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" minlength="2" required>
+                    </div>
 
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[+0-9 ()-]{7,}" required>
+                    <div class="field-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[+0-9 ()-]{7,}" required>
+                    </div>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div class="field-group md:col-span-2">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Write your message" minlength="10" required></textarea>
+                    <div class="field-group md:col-span-2">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message" minlength="10" required></textarea>
+                    </div>
 
-                <input type="submit" value="Submit">
-            </form>
+                    <div class="field-group md:col-span-2">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer class="profile-footer">
         <p>Thank you for visiting my profile. I look forward to growing my skills and creating useful web solutions.</p>
     </footer>
+    <script>
+        const profilePhoto = document.querySelector(".profile-photo");
+
+        function spinProfilePhoto() {
+            profilePhoto.classList.remove("is-spinning");
+            void profilePhoto.offsetWidth;
+            profilePhoto.classList.add("is-spinning");
+        }
+
+        profilePhoto.addEventListener("pointerenter", spinProfilePhoto);
+        profilePhoto.addEventListener("click", spinProfilePhoto);
+        profilePhoto.addEventListener("animationend", () => {
+            profilePhoto.classList.remove("is-spinning");
+        });
+    </script>
 </body>
 </html>

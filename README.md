@@ -1,6 +1,6 @@
 # CHRISTISEN ZEMBE PROFILE
 
-This project is a simple student profile website created for the Software Engineering and Web Technologies assignment. The page includes a clean academic layout, semantic HTML structure, and a minimal style that matches the assignment requirements.
+This project is a responsive student profile website created for the Software Engineering and Web Technologies assignment. The page keeps the original semantic HTML5 structure from Assignment 1 and adds a stronger visual system using CSS, Flexbox, Grid, and Tailwind utilities.
 
 ## Project Purpose
 
@@ -9,8 +9,17 @@ The website presents a student profile with:
 - a profile header and navigation
 - academic and personal details
 - a personal statement under the About section
-- skills and contact information
-- simple form styling with semantic HTML
+- skills organised in a responsive card grid
+- contact details and a styled contact form
+- accessibility-friendly, mobile-first styling
+
+## Tailwind and CSS Split
+
+This version intentionally mixes Tailwind utilities with custom CSS:
+
+- Tailwind is used for the main navigation and the contact form layout, including at least one responsive variant (`sm:` and `md:`) in the markup.
+- Custom CSS handles the global page design, colour palette, spacing, box model choices, and the grid/flex layouts that are central to the assignment requirements.
+- This separation keeps the HTML readable while preserving a consistent, purposeful design system rather than duplicating styles across files.
 
 ## Prompt Log
 
@@ -28,54 +37,60 @@ Final edited version used on the page:
 Reflection:
 The raw response sounded slightly formal and did not feel personal enough. I kept its main ideas about web development and problem-solving, but made the wording friendlier and connected it more clearly to practical learning.
 
-## Peer Review Accessibility Feedback
-
-During the peer review on Thursday, the reviewer identified a visibility and colour-contrast issue with the "Software Engineering | Web Technologies" program label in the red header. The text was visually subdued because it inherited a reduced opacity, which made it less clear to read.
-
-The fix was applied in `styles.css` by setting `.program-tag` to solid white (`color: #fff`) and removing the opacity reduction. This makes the label clearer against the header background and provides evidence that the peer-review feedback was acted on.
-
 ## Assignment Coverage
 
-This commit is aligned with the assignment requirements and includes:
+### Part A — CSS3 Fundamentals & Box Model
 
-### Part A: Semantic HTML5 structure
+- Semantic HTML5 structure from Assignment 1 remains intact.
+- Typography, spacing, and colour system were designed for clear visual hierarchy.
+- Styling is applied through a linked external stylesheet and selected Tailwind classes instead of inline styles.
+- Margin, padding, borders, and box sizing were intentionally adjusted rather than relying on browser defaults.
 
-- HTML5 document skeleton with title and meta description
-- Semantic header, nav, main, section, article, figure, address, and footer elements
-- Properly nested heading levels and section navigation
+### Part B — Flexbox Layout
 
-### Part B: Website structure
+- The navigation bar uses Flexbox for alignment, wrapping, spacing, and centring.
+- The contact form field groups also use Flexbox for consistent alignment and responsive stacking.
+- Multiple Flexbox properties are used, including `display: flex`, `flex-wrap`, `justify-content`, and `align-items`.
 
-- Student name and tagline in the header
-- Profile, About, Academic Information, Skills, and Contact sections
-- Contact form with text, telephone, email, and textarea fields
-- Labels and native validation attributes on every form control
+### Part C — CSS Grid Layout
 
-### Part C: Semantic HTML
+- The page uses CSS Grid for the main content container and the skills section card layout.
+- Grid items use meaningful spacing and responsive columns, including `repeat()` and `minmax()` patterns.
+- The skills grid demonstrates a real grid layout instead of a simple single-column list.
 
-- AI prompt, raw output, final edited version, and reflection are recorded above
-- The About section copy was critically revised before being used
+### Part D — Responsive Design & Media Queries
 
-### Part D: Styling and layout
+- The stylesheet is built mobile-first, with wider layouts added through `min-width` media queries.
+- Custom media queries were written for tablet and desktop breakpoints.
+- The layout is designed to stay clean at approximately 375px, 768px, and 1280px.
+- Content reflows without horizontal scrolling, overlapping text, or broken navigation.
 
-- Meaningful accessible labels for the initials figure and form fields
-- Readable red-and-white colour contrast
-- Responsive layout for smaller screens
+### Part E — Tailwind Utility-First Styling
 
-### Part E: Version control
+- The header navigation is styled using Tailwind utility classes.
+- The contact form layout uses Tailwind utilities for spacing and responsive column changes.
+- Responsive variants are included to adjust spacing and layout at larger breakpoints.
 
-- Incremental commits document the profile, personal statement, visibility fix, final message, merge, and documentation updates
-- The finished page is pushed to the public GitHub repository
+### Part F — Testing & Code Quality
 
-### Part F: Code quality
+- The page was reviewed and adjusted for all three required breakpoints in the responsive design plan.
+- The markup is semantic, consistent, and free of placeholder or lorem text.
+- No console errors were introduced during the final layout updates.
 
-- Consistently indented HTML and CSS with no placeholder text
-- The page uses native HTML5 validation without JavaScript
+## Testing Notes
+
+Testing checklist completed for the required responsive breakpoints:
+
+- Mobile: approximately 375px
+- Tablet: approximately 768px
+- Desktop: approximately 1280px
+
+The layout was checked for overflow, navigation stability, and text readability across these widths.
 
 ## Files Included
 
-- `profile.html` – main profile page
-- `styles.css` – styling for the assignment website
+- `profile.html` – main profile page and Tailwind-enabled markup
+- `styles.css` – custom responsive styling and layout rules
 
 ## How to Run
 
